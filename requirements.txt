@@ -1,0 +1,41 @@
+1) creating a virtual env for each application
+python -m venv project1
+
+2) activate virtual environment -
+project1\Scripts\activate
+
+
+3) Install flask
+pip install flask
+pip install Flask-Session
+pip install werkzeug==0.16.0
+pip install Flask-SQLAlchemy
+pip install psycopg2
+pip install requests
+pip install flask_debug
+
+
+4) set the application environment
+set FLASK_APP = application.py
+SET FLASK_DEBUG = 1
+SET FLASK_ENV=development
+SET DATABASE_URL=postgres://mlxyabauzhrmnm:64c755fd0ae35a98fdfbc24bc2aadfffe272d57669e5f409d02e9d150aa8f643@ec2-52-86-73-86.compute-1.amazonaws.com:5432/d4358lt1iur571
+
+5) Flask run
+
+6) To quit from virtual env
+deactivate
+
+Database:
+https://data.heroku.com/datastores/67783560-c7e0-49c8-bf0c-21ffc8865c8b
+
+SQL:
+ALTER TABLE reviews
+  ADD CONSTRAINT uq_reviews UNIQUE(user_id, book_isbn);
+
+GoodReads:
+key: wSTncLhjVVyj46Is8Gytdg
+secret: YjbD3DrczNhN5AtlbsFezFKOUz2p5D5BAKUK3mCh8
+
+
+https://www.goodreads.com/book/review_counts.json?key=wSTncLhjVVyj46Is8Gytdg&isbn=0441172717
